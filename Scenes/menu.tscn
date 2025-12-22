@@ -4,7 +4,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_1rerr"]
 
-[node name="Menu" type="Control"]
+[node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
