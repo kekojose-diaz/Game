@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8vkxrhkn1x14"]
+[gd_scene load_steps=13 format=3 uid="uid://c8vkxrhkn1x14"]
 
+[ext_resource type="Script" uid="uid://dpa55ki56by7f" path="res://Scripts/player.gd" id="1_cvnsp"]
 [ext_resource type="Texture2D" uid="uid://bnbflyefemmqo" path="res://Assets/Player/Idle/BunnyIdleSide-Sheet.png" id="1_v0iea"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
@@ -70,6 +71,7 @@ animations = [{
 size = Vector2(14, 14)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_cvnsp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_tx1dd")
