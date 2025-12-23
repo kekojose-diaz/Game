@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://ijca8fofws8r"]
+
+[ext_resource type="Texture2D" uid="uid://c1cama0y2ap2b" path="res://Assets/Enemies/Fox/FoxSleep.png" id="1_it72u"]
+[ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="2_wnjnx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnjnx"]
+atlas = ExtResource("1_it72u")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkngh"]
+atlas = ExtResource("1_it72u")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6587k"]
+atlas = ExtResource("1_it72u")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_layx2"]
+atlas = ExtResource("1_it72u")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_layx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wnjnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rkngh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6587k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_layx2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwima"]
+size = Vector2(23, 9.5)
+
+[node name="fox No moving" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6.749999, -8.250001)
+scale = Vector2(1.890625, 1.5468749)
+sprite_frames = SubResource("SpriteFrames_layx2")
+
+[node name="killzone" parent="." instance=ExtResource("2_wnjnx")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(11.5, 11.75)
+shape = SubResource("RectangleShape2D_kwima")
