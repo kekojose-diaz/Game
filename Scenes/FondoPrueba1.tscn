@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq3vsxytcwbn3"]
+
+[ext_resource type="Texture2D" uid="uid://haatfuj7bill" path="res://Assets/Backgrounds/Mountains/sky.png" id="1_fctf0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+texture_repeat = 2
+repeat_size = Vector2(1500, 648)
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(592, 335)
+scale = Vector2(5, 5)
+texture = ExtResource("1_fctf0")
+region_rect = Rect2(0, 0, 2304, 648)
