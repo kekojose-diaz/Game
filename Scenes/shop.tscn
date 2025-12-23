@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://c4mgrjb2lkj8o"]
+
+[ext_resource type="Texture2D" uid="uid://hr63vs645eu7" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/decorations/shop_anim.png" id="1_a0mxf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2shtd"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(0, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_io27d"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(118, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fdj0q"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(236, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6jq0"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(354, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ps1r"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(472, 0, 118, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymrm4"]
+atlas = ExtResource("1_a0mxf")
+region = Rect2(590, 0, 118, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8dlv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2shtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_io27d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fdj0q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6jq0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ps1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymrm4")
+}],
+"loop": true,
+"name": &"idle Shop",
+"speed": 10.0
+}]
+
+[node name="Shop" type="StaticBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_s8dlv")
+animation = &"idle Shop"
+autoplay = "idle Shop"
+frame_progress = 0.6816122
