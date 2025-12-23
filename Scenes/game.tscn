@@ -986,6 +986,9 @@ _data = {
 &"move": SubResource("Animation_1l0tm")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dryh"]
+size = Vector2(4548, 2)
+
 [node name="Game" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -994,7 +997,7 @@ tile_map_data = PackedByteArray("AAD+/wEAAAABAAAAAAD//wEAAAABAAAAAAAAAAEAAAABAAA
 tile_set = SubResource("TileSet_3dryh")
 
 [node name="Player" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(479, -68)
+position = Vector2(486, -67)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(12, 27)
