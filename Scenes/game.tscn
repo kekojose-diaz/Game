@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://fbfggud2t5qm"]
+[gd_scene load_steps=37 format=4 uid="uid://fbfggud2t5qm"]
 
 [ext_resource type="PackedScene" uid="uid://c8vkxrhkn1x14" path="res://Scenes/player.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://cakf2dfgekuuh" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_1.png" id="2_1l0tm"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d3a1lmh4gmnm" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/decorations/rock_3.png" id="18_81klo"]
 [ext_resource type="PackedScene" uid="uid://b22c5jfwth46v" path="res://Scenes/fox.tscn" id="19_iivbl"]
 [ext_resource type="PackedScene" uid="uid://ijca8fofws8r" path="res://Scenes/fox_no_moving.tscn" id="20_7nbq1"]
+[ext_resource type="PackedScene" uid="uid://c1qjcyrtep8w6" path="res://Scenes/cookie.tscn" id="21_exi56"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -1655,3 +1656,8 @@ position = Vector2(6277, -409)
 
 [node name="fox No moving6" parent="Foxes" instance=ExtResource("20_7nbq1")]
 position = Vector2(6316, -409)
+
+[node name="Cookies" type="Node" parent="."]
+
+[node name="Cookie" parent="." instance=ExtResource("21_exi56")]
+position = Vector2(705, -88)
