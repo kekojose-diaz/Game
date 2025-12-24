@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dica6yhixhc4a"]
+
+[ext_resource type="AudioStream" uid="uid://c6r41r3h3gr01" path="res://Assets/Music/Sunlight Through Leaves.mp3" id="1_fghhr"]
+
+[node name="Node" type="Node"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_fghhr")
+autoplay = true
+max_distance = 999999.0
+attenuation = 0.001161322
+bus = &"Music"
