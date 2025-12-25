@@ -990,7 +990,7 @@ _data = {
 &"move": SubResource("Animation_1l0tm")
 }
 
-[node name="Game" type="Node2D"]
+[node name="Nivel 1" type="Node2D"]
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
@@ -1666,3 +1666,66 @@ position = Vector2(6316, -409)
 
 [node name="Cookie" parent="Cookies" instance=ExtResource("21_exi56")]
 position = Vector2(705, -88)
+
+[node name="Cookie2" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(663, -89)
+
+[node name="Cookie3" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(904, -150)
+
+[node name="Cookie4" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(1864, -280)
+
+[node name="Cookie5" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(2439, -487)
+
+[node name="Cookie6" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(2520, -487)
+
+[node name="Cookie7" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3245, -331)
+
+[node name="Cookie8" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3283, -332)
+
+[node name="Cookie9" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3323, -332)
+
+[node name="Cookie10" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3244, -356)
+
+[node name="Cookie11" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3282, -357)
+
+[node name="Cookie12" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3323, -357)
+
+[node name="Cookie13" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3537, -633)
+
+[node name="Cookie14" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(3664, -617)
+
+[node name="Cookie15" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4194, -330)
+
+[node name="Cookie16" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4147, -310)
+
+[node name="Cookie17" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4236, -311)
+
+[node name="Cookie18" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4736, -131)
+
+[node name="Cookie19" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4800, -131)
+
+[node name="Cookie20" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(4867, -132)
+
+[node name="Cookie21" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(6288, -430)
+
+[node name="Cookie22" parent="Cookies" instance=ExtResource("21_exi56")]
+position = Vector2(6323, -430)

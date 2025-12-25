@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Drifting Memories.mp3-e7306088d4e7541c7076604
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
