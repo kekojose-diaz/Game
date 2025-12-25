@@ -835,7 +835,7 @@ physics_layer_0/collision_layer = 2
 sources/0 = SubResource("TileSetAtlasSource_wrm1d")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3dryh"]
-size = Vector2(6936, 9)
+size = Vector2(7186, 9)
 
 [sub_resource type="Animation" id="Animation_ldgsr"]
 length = 0.001
@@ -1011,7 +1011,7 @@ position_smoothing_enabled = true
 position = Vector2(401, 138)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
-position = Vector2(3067, 1.5)
+position = Vector2(3192, 1.5)
 shape = SubResource("RectangleShape2D_3dryh")
 
 [node name="Plataformas" type="Node" parent="."]
