@@ -17,7 +17,9 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("Escape") and (current_menu == null) and (not get_tree().paused):
 		# Solo abrir pausa si estamos en un nivel (no en menú principal)
+		print("Input event Escape pressed 2")
 		if get_tree().current_scene.is_in_group("level"):
+			print("Input event Escape pressed 3")
 			open_pause_menu()
 	elif event.is_action_pressed("Escape") and (get_tree().paused):
 		resume_game()
