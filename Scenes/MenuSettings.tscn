@@ -1,0 +1,198 @@
+[gd_scene load_steps=15 format=3 uid="uid://de6cogv5x5fuf"]
+
+[ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="1_n3yhl"]
+[ext_resource type="Script" uid="uid://bocvxbf5mncbo" path="res://Scripts/menu_settings.gd" id="1_svhn3"]
+[ext_resource type="PackedScene" uid="uid://dsw24gdoswe3" path="res://Scenes/VolumeSlider.tscn" id="2_svhn3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8vx7"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wj6il"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mthkl"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mj0m"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bk0iw"]
+bg_color = Color(0.33333334, 0.88235295, 0.8235294, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4mf4"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4lbra"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3pdpi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a8fu8"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_evujh"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7riw"]
+
+[node name="MenuSettings" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_svhn3")
+
+[node name="MasterLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -143.0
+offset_right = 195.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_n3yhl")
+theme_override_font_sizes/font_size = 50
+text = "Master volume"
+
+[node name="MusicLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -41.0
+offset_right = 195.0
+offset_bottom = 7.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_n3yhl")
+theme_override_font_sizes/font_size = 50
+text = "Music volume"
+
+[node name="SfxLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = 76.0
+offset_right = 195.0
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_n3yhl")
+theme_override_font_sizes/font_size = 50
+text = "SFX volume"
+
+[node name="VolumeSlider2" parent="." instance=ExtResource("2_svhn3")]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 345.0
+offset_right = 766.0
+offset_bottom = 387.0
+bus_name = "Music"
+
+[node name="VolumeSlider3" parent="." instance=ExtResource("2_svhn3")]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 452.0
+offset_right = 766.0
+offset_bottom = 494.0
+bus_name = "Sfx"
+
+[node name="VolumeSlider" parent="." instance=ExtResource("2_svhn3")]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 229.0
+offset_right = 766.0
+offset_bottom = 271.0
+bus_name = "Master"
+
+[node name="BBack" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -194.0
+offset_top = 176.0
+offset_right = 206.0
+offset_bottom = 256.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_n3yhl")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_n8vx7")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wj6il")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mthkl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_7mj0m")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bk0iw")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_o4mf4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_4lbra")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3pdpi")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_a8fu8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_evujh")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h7riw")
+text = "BACK"
+
+[connection signal="pressed" from="BBack" to="." method="_on_b_back_pressed"]
