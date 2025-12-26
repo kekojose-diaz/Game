@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://62c2eqfup607" path="res://Assets/Cookie/Cookie_rotating.png" id="1_ku7mm"]
 [ext_resource type="Script" uid="uid://dmcxjib7r00t7" path="res://Scripts/cookie.gd" id="1_px6u8"]
-[ext_resource type="AudioStream" uid="uid://c7nb8n3fxgr1q" path="res://Assets/Sounds/crumple-92100.mp3" id="3_us53w"]
+[ext_resource type="AudioStream" uid="uid://d0xchyo4s51jr" path="res://Assets/Sounds/CookieSound3.mp3" id="3_us53w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ku7mm"]
 atlas = ExtResource("1_ku7mm")
@@ -45,6 +45,7 @@ radius = 8.0
 
 [sub_resource type="Animation" id="Animation_us53w"]
 resource_name = "Bite"
+length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -76,8 +77,8 @@ tracks/2/path = NodePath("BiteCookieSound:playing")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(0.93303317),
 "update": 1,
 "values": [true]
 }
@@ -88,7 +89,7 @@ tracks/3/path = NodePath(".")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.8333333),
+"times": PackedFloat32Array(0.43333334),
 "transitions": PackedFloat32Array(1),
 "values": [{
 "args": [],
