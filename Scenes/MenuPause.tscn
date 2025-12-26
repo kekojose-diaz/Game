@@ -1,0 +1,227 @@
+[gd_scene load_steps=14 format=3 uid="uid://dwd20bdy6380l"]
+
+[ext_resource type="Script" uid="uid://b1u7w70xiffq" path="res://Scripts/pause_menu.gd" id="1_qwhev"]
+[ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="2_5w4ur"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ey1tb"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_siy43"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxrls"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gqxqw"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lptsj"]
+bg_color = Color(0.33333334, 0.88235295, 0.8235294, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_425uk"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mys0b"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7c70"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pmvjn"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1363l"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h171x"]
+
+[node name="MenuPause" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qwhev")
+
+[node name="BResume" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -197.0
+offset_right = 200.0
+offset_bottom = -117.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5w4ur")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_gqxqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lptsj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_425uk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mys0b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_c7c70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pmvjn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_1363l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h171x")
+text = "RESUME"
+
+[node name="BRestart" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -105.0
+offset_right = 200.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5w4ur")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_gqxqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lptsj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_425uk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mys0b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_c7c70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pmvjn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_1363l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h171x")
+text = "RESTART LEVEL"
+
+[node name="BSettings" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = -12.0
+offset_right = 201.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5w4ur")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_gqxqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lptsj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_425uk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mys0b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_c7c70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pmvjn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_1363l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h171x")
+text = "SETTINGS"
+
+[node name="BExit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -199.0
+offset_top = 79.0
+offset_right = 201.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_5w4ur")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ey1tb")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_siy43")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yxrls")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_gqxqw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lptsj")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_425uk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mys0b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_c7c70")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pmvjn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_1363l")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h171x")
+text = "EXIT"
+
+[connection signal="pressed" from="BResume" to="." method="_on_b_resume_pressed"]
+[connection signal="pressed" from="BRestart" to="." method="_on_b_restart_pressed"]
+[connection signal="pressed" from="BSettings" to="." method="_on_b_settings_pressed"]
+[connection signal="pressed" from="BExit" to="." method="_on_b_exit_pressed"]
