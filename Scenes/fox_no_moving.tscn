@@ -36,7 +36,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwima"]
@@ -48,6 +48,7 @@ size = Vector2(23, 9.5)
 position = Vector2(6.749999, -8.250001)
 scale = Vector2(1.890625, 1.5468749)
 sprite_frames = SubResource("SpriteFrames_layx2")
+autoplay = "default"
 
 [node name="killzone" parent="." instance=ExtResource("2_wnjnx")]
 collision_layer = 4
