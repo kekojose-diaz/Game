@@ -82,11 +82,16 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_svhn3")
 
 [node name="MasterLabel" type="Label" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -111,9 +116,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -196.0
-offset_top = -41.0
+offset_top = -176.0
 offset_right = 195.0
-offset_bottom = 7.0
+offset_bottom = -128.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_n3yhl")
@@ -128,32 +133,33 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -196.0
-offset_top = 76.0
+offset_top = -59.0
 offset_right = 195.0
-offset_bottom = 124.0
+offset_bottom = -11.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("1_n3yhl")
 theme_override_font_sizes/font_size = 50
 text = "SFX volume"
 
-[node name="VolumeSlider2" parent="." instance=ExtResource("2_svhn3")]
+[node name="MusicSlider" parent="." instance=ExtResource("2_svhn3")]
 layout_mode = 0
 offset_left = 382.0
-offset_top = 345.0
+offset_top = 210.0
 offset_right = 766.0
-offset_bottom = 387.0
+offset_bottom = 252.0
 bus_name = "Music"
 
-[node name="VolumeSlider3" parent="." instance=ExtResource("2_svhn3")]
+[node name="SfxSlider" parent="." instance=ExtResource("2_svhn3")]
 layout_mode = 0
 offset_left = 382.0
-offset_top = 452.0
+offset_top = 317.0
 offset_right = 766.0
-offset_bottom = 494.0
+offset_bottom = 359.0
 bus_name = "Sfx"
 
-[node name="VolumeSlider" parent="." instance=ExtResource("2_svhn3")]
+[node name="MasterSlider" parent="." instance=ExtResource("2_svhn3")]
+visible = false
 layout_mode = 0
 offset_left = 382.0
 offset_top = 229.0
@@ -169,9 +175,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -194.0
-offset_top = 176.0
+offset_top = 41.0
 offset_right = 206.0
-offset_bottom = 256.0
+offset_bottom = 121.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 0.0

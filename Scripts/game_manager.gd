@@ -61,7 +61,12 @@ func back_from_settings():
 		open_pause_menu()
 	elif previous_context == "main_menu":
 		get_tree().change_scene_to_file("res://Scenes/MenuMain.tscn")
-	# Si es "main_menu", ya estamos en esa escena
+		
+func restart_game():
+	get_tree().paused = false
+	_close_current_menu()
+	get_tree().reload_current_scene()
+		
 
 func _close_current_menu():
 	if current_menu:
