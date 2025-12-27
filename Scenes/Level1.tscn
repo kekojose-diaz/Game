@@ -1020,72 +1020,72 @@ position = Vector2(401, 138)
 position = Vector2(3192, 1.5)
 shape = SubResource("RectangleShape2D_3dryh")
 
-[node name="Plataformas" type="Node" parent="."]
+[node name="Platforms" type="Node" parent="."]
 
-[node name="Platform4" parent="Plataformas" instance=ExtResource("5_o0dvq")]
+[node name="Platform4" parent="Platforms" instance=ExtResource("5_o0dvq")]
 position = Vector2(5816, -201)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Platform4"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4"]
 libraries = {
 &"": SubResource("AnimationLibrary_o5yvi")
 }
 autoplay = "move"
 
-[node name="Platform" parent="Plataformas" instance=ExtResource("5_o0dvq")]
+[node name="Platform" parent="Platforms" instance=ExtResource("5_o0dvq")]
 position = Vector2(1512, -90)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Platform"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform"]
 libraries = {
 &"": SubResource("AnimationLibrary_wowpa")
 }
 autoplay = "move"
 
-[node name="Platform2" parent="Plataformas" instance=ExtResource("5_o0dvq")]
+[node name="Platform2" parent="Platforms" instance=ExtResource("5_o0dvq")]
 position = Vector2(2633, -490)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Platform2"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform2"]
 libraries = {
 &"": SubResource("AnimationLibrary_1l0tm")
 }
 autoplay = "move"
 
-[node name="Platform3" parent="Plataformas" instance=ExtResource("5_o0dvq")]
+[node name="Platform3" parent="Platforms" instance=ExtResource("5_o0dvq")]
 position = Vector2(3384, -312)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/Platform3"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform3"]
 libraries = {
 &"": SubResource("AnimationLibrary_h4fw4")
 }
 autoplay = "move"
 
-[node name="Fondo" type="Node" parent="."]
+[node name="Background" type="Node" parent="."]
 
-[node name="Arboles 1 Back" type="Parallax2D" parent="Fondo"]
+[node name="Arboles 1 Back" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(1040, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Fondo/Arboles 1 Back"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 1 Back"]
 z_index = -5
 position = Vector2(786.75, -355)
 scale = Vector2(3.2515628, 5.244444)
 texture = ExtResource("6_1nrjw")
 
-[node name="Arboles 2 Back" type="Parallax2D" parent="Fondo"]
+[node name="Arboles 2 Back" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.5, 1)
 repeat_size = Vector2(1040, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Fondo/Arboles 2 Back"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 2 Back"]
 z_index = -10
 position = Vector2(782.25, -353.25)
 scale = Vector2(3.2796872, 5.2972226)
 texture = ExtResource("7_bqkvc")
 
-[node name="Arboles 3 Back" type="Parallax2D" parent="Fondo"]
+[node name="Arboles 3 Back" type="Parallax2D" parent="Background"]
 scroll_scale = Vector2(0.3, 1)
 scroll_offset = Vector2(220, -5)
 repeat_size = Vector2(1040, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="Fondo/Arboles 3 Back"]
+[node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 3 Back"]
 z_index = -15
 position = Vector2(784.99994, -354)
 scale = Vector2(3.25, 5.255555)

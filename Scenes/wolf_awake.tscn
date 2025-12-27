@@ -80,6 +80,7 @@ size = Vector2(9.000002, 23.5)
 script = ExtResource("1_d8lod")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
 position = Vector2(10.499998, -1.5000036)
 scale = Vector2(1.65625, 1.6562498)
 sprite_frames = SubResource("SpriteFrames_kbn5l")
