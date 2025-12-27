@@ -104,7 +104,7 @@ collision_mask = 2
 
 [node name="RayCast_right" type="RayCast2D" parent="."]
 position = Vector2(10, 17)
-target_position = Vector2(16, 0)
+target_position = Vector2(15, 0)
 collision_mask = 2
 
 [node name="RayCast_down_left" type="RayCast2D" parent="."]
@@ -119,8 +119,8 @@ collision_mask = 2
 
 [node name="RayCast_awake_left" type="RayCast2D" parent="."]
 position = Vector2(11, 17)
-target_position = Vector2(-38, 0)
+target_position = Vector2(-42, 0)
 
 [node name="RayCast_awake_right" type="RayCast2D" parent="."]
 position = Vector2(10, 17)
-target_position = Vector2(32, 0)
+target_position = Vector2(39, 0)
