@@ -44,6 +44,7 @@ animations = [{
 size = Vector2(9.000002, 23.5)
 
 [node name="Fox moving" type="Node2D"]
+z_index = 5
 script = ExtResource("3_yj2lq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
