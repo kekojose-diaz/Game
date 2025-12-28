@@ -1,8 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://de6cogv5x5fuf"]
+[gd_scene load_steps=16 format=3 uid="uid://de6cogv5x5fuf"]
 
 [ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="1_n3yhl"]
 [ext_resource type="Script" uid="uid://bocvxbf5mncbo" path="res://Scripts/menu_settings.gd" id="1_svhn3"]
 [ext_resource type="PackedScene" uid="uid://dsw24gdoswe3" path="res://Scenes/VolumeSlider.tscn" id="2_svhn3"]
+[ext_resource type="AudioStream" uid="uid://eah1oodqe5co" path="res://Assets/Sounds/CookieSound.mp3" id="4_n8vx7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8vx7"]
 bg_color = Color(1, 1, 1, 1)
@@ -156,7 +157,7 @@ offset_left = 382.0
 offset_top = 317.0
 offset_right = 766.0
 offset_bottom = 359.0
-bus_name = "Sfx"
+bus_name = "SFX"
 
 [node name="MasterSlider" parent="." instance=ExtResource("2_svhn3")]
 visible = false
@@ -201,4 +202,9 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_evujh")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_h7riw")
 text = "BACK"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_n8vx7")
+bus = &"SFX"
+
+[connection signal="drag_ended" from="SfxSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="pressed" from="BBack" to="." method="_on_b_back_pressed"]

@@ -1,8 +1,7 @@
-[gd_scene load_steps=15 format=3 uid="uid://d0af1flsbjxqh"]
+[gd_scene load_steps=11 format=3 uid="uid://d0af1flsbjxqh"]
 
 [ext_resource type="Texture2D" uid="uid://dwjxqjjr606bt" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/decorations/Dimensional_Portal.png" id="1_j20fm"]
 [ext_resource type="Script" uid="uid://c8fniqnw810ol" path="res://Scripts/portal.gd" id="1_oi2tk"]
-[ext_resource type="AudioStream" uid="uid://dco5u00voayip" path="res://Assets/Sounds/teleport1.mp3" id="3_dashy"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j20fm"]
 atlas = ExtResource("1_j20fm")
@@ -57,58 +56,7 @@ animations = [{
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bt0xm"]
 height = 40.0
 
-[sub_resource type="Animation" id="Animation_dashy"]
-resource_name = "Teleport"
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/1/type = "method"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.96666664),
-"transitions": PackedFloat32Array(1),
-"values": [{
-"args": [],
-"method": &"do_change_level"
-}]
-}
-
-[sub_resource type="Animation" id="Animation_uwyjv"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:playing")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_cqy4h"]
-_data = {
-&"RESET": SubResource("Animation_uwyjv"),
-&"Teleport": SubResource("Animation_dashy")
-}
-
-[node name="Area2D" type="Area2D"]
+[node name="Portal" type="Area2D"]
 script = ExtResource("1_oi2tk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -124,14 +72,5 @@ autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_bt0xm")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_dashy")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath("../AudioStreamPlayer")
-libraries = {
-&"": SubResource("AnimationLibrary_cqy4h")
-}
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
