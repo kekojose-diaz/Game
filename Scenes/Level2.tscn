@@ -1,6 +1,7 @@
-[gd_scene load_steps=40 format=4 uid="uid://cfrr8weerucoy"]
+[gd_scene load_steps=41 format=4 uid="uid://cfrr8weerucoy"]
 
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="1_ms0wi"]
+[ext_resource type="Script" uid="uid://cgq3i0mgrsy2" path="res://Scripts/level_2.gd" id="1_p4u3k"]
 [ext_resource type="PackedScene" uid="uid://c8vkxrhkn1x14" path="res://Scenes/player.tscn" id="2_5awjf"]
 [ext_resource type="Texture2D" uid="uid://mkxmj7d1u2sg" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Enviroment.png" id="3_n3cqh"]
 [ext_resource type="PackedScene" uid="uid://cjnbjdnvcr22y" path="res://Scenes/platform.tscn" id="4_5awjf"]
@@ -1952,6 +1953,7 @@ _data = {
 }
 
 [node name="Level2" type="Node2D"]
+script = ExtResource("1_p4u3k")
 
 [node name="killzone" parent="." instance=ExtResource("1_ms0wi")]
 

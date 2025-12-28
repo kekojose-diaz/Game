@@ -4,10 +4,8 @@
 
 [node name="Node" type="Node"]
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("1_fghhr")
 autoplay = true
-max_distance = 999999.0
-attenuation = 0.001161322
 bus = &"Music"
