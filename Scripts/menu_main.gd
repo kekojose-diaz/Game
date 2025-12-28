@@ -2,6 +2,8 @@ extends Control
 
 
 func _on_b_play_pressed() -> void:
+	TransitionScene.transition(false)
+	await TransitionScene._on_transition_finished
 	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
 
 
