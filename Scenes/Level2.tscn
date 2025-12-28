@@ -2072,7 +2072,7 @@ autoplay = "move"
 
 [node name="Back1" type="Parallax2D" parent="Background"]
 z_index = -50
-scroll_scale = Vector2(0.1, 1)
+scroll_scale = Vector2(0.4, 1)
 scroll_offset = Vector2(389, -144)
 repeat_size = Vector2(915, 0)
 
@@ -2082,14 +2082,13 @@ scale = Vector2(2.2906947, 5.8866663)
 texture = ExtResource("5_ehjmi")
 
 [node name="Back 2" type="Parallax2D" parent="Background"]
-z_index = -45
-scroll_scale = Vector2(0.2, 1)
-scroll_offset = Vector2(-6, 11)
-repeat_size = Vector2(957, 0)
+z_index = -5
+scroll_scale = Vector2(0.8, 1)
+repeat_size = Vector2(915, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back 2"]
-position = Vector2(156.50003, -300)
-scale = Vector2(2.3925, 4.48)
+position = Vector2(148, -196)
+scale = Vector2(2.3925, 6.0366664)
 texture = ExtResource("6_p4u3k")
 
 [node name="Checkpoints" type="Node" parent="."]
