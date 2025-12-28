@@ -1,7 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://btfwxbh8s0tj6"]
+[gd_scene load_steps=18 format=3 uid="uid://btfwxbh8s0tj6"]
 
 [ext_resource type="Script" uid="uid://mjmnqv1kqcic" path="res://Scripts/menu_main.gd" id="1_a20kb"]
 [ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="2_a2g4b"]
+[ext_resource type="Texture2D" uid="uid://cakf2dfgekuuh" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_1.png" id="2_e4edp"]
+[ext_resource type="Texture2D" uid="uid://ch0b4im8pm0am" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_2.png" id="3_g8p52"]
+[ext_resource type="Texture2D" uid="uid://duijk6iv3vsvo" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_3.png" id="4_v5ntl"]
 
 [sub_resource type="SystemFont" id="SystemFont_1rerr"]
 
@@ -86,6 +89,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a20kb")
 
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(576.5, 323.00003)
+scale = Vector2(3.5968747, 3.6)
+texture = ExtResource("2_e4edp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(576.5, 323.5)
+scale = Vector2(3.603125, 3.6055553)
+texture = ExtResource("3_g8p52")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(575.5, 323.99997)
+scale = Vector2(3.5968757, 3.6)
+texture = ExtResource("4_v5ntl")
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -110,7 +128,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_1rerr")
 theme_override_font_sizes/font_size = 60
-text = "GAME TITLE
+text = "COOKIE SCOUT
 "
 horizontal_alignment = 1
 vertical_alignment = 1
