@@ -142,7 +142,7 @@ _data = {
 &"RESET": SubResource("Animation_gdleh")
 }
 
-[node name="Cookie" type="Area2D"]
+[node name="Cookie" type="Area2D" groups=["Cookie"]]
 collision_layer = 8
 script = ExtResource("1_px6u8")
 

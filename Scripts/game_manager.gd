@@ -77,8 +77,10 @@ func reset_points():
 	score = 0
 	print("Resetado el score:" + str(score))
 
-func set_max_points(max: int):
-	max_score_level = max
+func set_max_points(maxPoints: int):
+	max_score_level = maxPoints
+	print("Numero de score maximo: " + str(maxPoints))
+
   
 func add_point():
 	score += 1
