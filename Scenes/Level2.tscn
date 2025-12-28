@@ -8,9 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dhk0n7trv8vsn" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Background.png" id="5_ehjmi"]
 [ext_resource type="Texture2D" uid="uid://dahr56pwmpdbk" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Midleground.png" id="6_p4u3k"]
 [ext_resource type="PackedScene" uid="uid://b18l4i78yaakm" path="res://Scenes/checkpoint.tscn" id="8_p4u3k"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_kkyht"]
-size = Vector2(9183, 20)
+[ext_resource type="Texture2D" uid="uid://62c2eqfup607" path="res://Assets/Cookie/Cookie_rotating.png" id="9_70df5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkyht"]
 texture = ExtResource("3_n3cqh")
@@ -1969,9 +1967,9 @@ position = Vector2(194, -137)
 position = Vector2(-3, 7)
 zoom = Vector2(2, 2)
 limit_left = -9999973
-limit_top = -628
+limit_top = -681
 limit_right = 10000027
-limit_bottom = -57
+limit_bottom = -8
 rotation_smoothing_enabled = true
 
 [node name="killzone" parent="." instance=ExtResource("1_ms0wi")]
@@ -2078,22 +2076,21 @@ autoplay = "move"
 [node name="Back1" type="Parallax2D" parent="Background"]
 z_index = -50
 scroll_scale = Vector2(0.4, 1)
-scroll_offset = Vector2(389, -144)
-repeat_size = Vector2(915, 0)
+repeat_size = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back1"]
-position = Vector2(656.1389, -59.99993)
-scale = Vector2(2.2906947, 5.8866663)
+position = Vector2(525, -300)
+scale = Vector2(3.5, 5)
 texture = ExtResource("5_ehjmi")
 
 [node name="Back 2" type="Parallax2D" parent="Background"]
 z_index = -5
 scroll_scale = Vector2(0.8, 1)
-repeat_size = Vector2(915, 0)
+repeat_size = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back 2"]
-position = Vector2(148, -196)
-scale = Vector2(2.3925, 6.0366664)
+position = Vector2(525, -300)
+scale = Vector2(3.5, 5)
 texture = ExtResource("6_p4u3k")
 
 [node name="Checkpoints" type="Node" parent="."]
@@ -2112,3 +2109,32 @@ position = Vector2(5250, -142)
 
 [node name="checkpoint5" parent="Checkpoints" instance=ExtResource("8_p4u3k")]
 position = Vector2(7607, -238)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 43.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(6, 11)
+texture = ExtResource("9_70df5")
+centered = false
+hframes = 4
+
+[node name="LabelScore" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.5830002
+anchor_top = -2.628
+anchor_right = 2.5830002
+anchor_bottom = -2.628
+offset_left = -161.97601
+offset_top = 118.004
+offset_right = -119.97601
+offset_bottom = 141.004
+text = "0 / 20"

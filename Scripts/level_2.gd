@@ -9,7 +9,7 @@ func _ready() -> void:
 	audioPlayer = Music.get_node("AudioStreamPlayer")
 	if audioPlayer != null:
 		print("AudioPlayer assigned")
-		audioPlayer.stream = load("res://Assets/Music/Strange Worlds.mp3")
+		audioPlayer.stream = load("res://Assets/Music/Wanderer's Tale.mp3")
 		audioPlayer.play()
 	print("Evento ready Level 1")
 	add_to_group("level")
