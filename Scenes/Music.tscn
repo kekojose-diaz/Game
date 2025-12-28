@@ -5,6 +5,7 @@
 [node name="Node" type="Node"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+process_mode = 3
 stream = ExtResource("1_fghhr")
 autoplay = true
 max_distance = 999999.0

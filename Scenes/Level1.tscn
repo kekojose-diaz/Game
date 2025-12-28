@@ -1,6 +1,6 @@
 [gd_scene load_steps=38 format=4 uid="uid://fbfggud2t5qm"]
 
-[ext_resource type="Script" uid="uid://yceifl3h8cil" path="res://Scripts/game_manager.gd" id="1_fh0sh"]
+[ext_resource type="Script" uid="uid://ddrijdxlrpei3" path="res://Scripts/level_1.gd" id="1_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://cp82rlofv87ro" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/oak_woods_tileset.png" id="2_03od6"]
 [ext_resource type="PackedScene" uid="uid://c8vkxrhkn1x14" path="res://Scenes/player.tscn" id="3_384de"]
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="4_bhaf5"]
@@ -991,9 +991,6 @@ _data = {
 }
 
 [node name="Level1" type="Node2D"]
-
-[node name="GameManager" type="Node" parent="."]
-unique_name_in_owner = true
 script = ExtResource("1_fh0sh")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
