@@ -2741,6 +2741,20 @@ limit_right = 10000030
 limit_bottom = 117
 position_smoothing_enabled = true
 
+[node name="LabelScore" type="Label" parent="Player/Camera2D"]
+unique_name_in_owner = true
+offset_left = -263.0
+offset_top = -161.0
+offset_right = -221.0
+offset_bottom = -138.0
+text = "0 / 20"
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Camera2D"]
+position = Vector2(-281, -155)
+texture = ExtResource("5_bhaf5")
+centered = false
+hframes = 4
+
 [node name="Killzone" parent="." instance=ExtResource("4_bhaf5")]
 position = Vector2(401, 138)
 
@@ -2789,31 +2803,37 @@ autoplay = "move"
 [node name="Background" type="Node" parent="."]
 
 [node name="Arboles 1 Back" type="Parallax2D" parent="Background"]
+visible = false
 scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(1040, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 1 Back"]
+visible = false
 z_index = -5
 position = Vector2(786.75, -355)
 scale = Vector2(3.2515628, 5.244444)
 texture = ExtResource("6_1nrjw")
 
 [node name="Arboles 2 Back" type="Parallax2D" parent="Background"]
+visible = false
 scroll_scale = Vector2(0.5, 1)
 repeat_size = Vector2(1040, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 2 Back"]
+visible = false
 z_index = -10
 position = Vector2(782.25, -353.25)
 scale = Vector2(3.2796872, 5.2972226)
 texture = ExtResource("7_bqkvc")
 
 [node name="Arboles 3 Back" type="Parallax2D" parent="Background"]
+visible = false
 scroll_scale = Vector2(0.3, 1)
 scroll_offset = Vector2(220, -5)
 repeat_size = Vector2(1040, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Arboles 3 Back"]
+visible = false
 z_index = -15
 position = Vector2(784.99994, -354)
 scale = Vector2(3.25, 5.255555)
@@ -3461,32 +3481,3 @@ position = Vector2(6288, -430)
 
 [node name="Cookie22" parent="Cookies" instance=ExtResource("22_ghekl")]
 position = Vector2(6323, -430)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 2
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 72.0
-offset_bottom = 43.0
-
-[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(6, 11)
-texture = ExtResource("5_bhaf5")
-centered = false
-hframes = 4
-
-[node name="LabelScore" type="Label" parent="CanvasLayer/Control"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 2.5830002
-anchor_top = -2.628
-anchor_right = 2.5830002
-anchor_bottom = -2.628
-offset_left = -161.97601
-offset_top = 118.004
-offset_right = -119.97601
-offset_bottom = 141.004
-text = "0 / 20"

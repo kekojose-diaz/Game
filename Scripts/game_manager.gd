@@ -6,6 +6,7 @@ var settings_menu_scene = preload("res://Scenes/MenuSettings.tscn")
 var score = 0
 var max_score_level = 0
 var previous_scene: String = ""
+var labelScore: Label = null
 
 var current_menu: Control = null
 var previous_context: String = ""  # "pause" o "main_menu"
@@ -76,15 +77,21 @@ func _close_current_menu():
 func reset_points():
 	score = 0
 	print("Resetado el score:" + str(score))
+	if labelScore != null:
+		labelScore.text = str(score) + " / " + str(max_score_level)
 
 func set_max_points(maxPoints: int):
 	max_score_level = maxPoints
 	print("Numero de score maximo: " + str(maxPoints))
+	if labelScore != null:
+		labelScore.text = str(score) + " / " + str(max_score_level)
 
   
 func add_point():
 	score += 1
 	print("Score:" + str(score))
+	if labelScore != null:
+		labelScore.text = str(score) + " / " + str(max_score_level)
 	
 func set_previous_scene(scene_name: String):
 	previous_scene = scene_name
