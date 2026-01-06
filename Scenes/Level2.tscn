@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://cfrr8weerucoy"]
+[gd_scene load_steps=42 format=4 uid="uid://cfrr8weerucoy"]
 
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="1_ms0wi"]
 [ext_resource type="Script" uid="uid://cgq3i0mgrsy2" path="res://Scripts/level_2.gd" id="1_p4u3k"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dhk0n7trv8vsn" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Background.png" id="5_ehjmi"]
 [ext_resource type="Texture2D" uid="uid://dahr56pwmpdbk" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Midleground.png" id="6_p4u3k"]
 [ext_resource type="PackedScene" uid="uid://b18l4i78yaakm" path="res://Scenes/checkpoint.tscn" id="8_p4u3k"]
+[ext_resource type="PackedScene" uid="uid://c1qjcyrtep8w6" path="res://Scenes/cookie.tscn" id="9_70df5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkyht"]
 size = Vector2(9183, 20)
@@ -2079,8 +2080,8 @@ scroll_offset = Vector2(389, -144)
 repeat_size = Vector2(915, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back1"]
-position = Vector2(656.1389, -59.99993)
-scale = Vector2(2.2906947, 5.8866663)
+position = Vector2(656.1389, -4.9999924)
+scale = Vector2(2.2906947, 6.253333)
 texture = ExtResource("5_ehjmi")
 
 [node name="Back 2" type="Parallax2D" parent="Background"]
@@ -2089,8 +2090,8 @@ scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(915, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back 2"]
-position = Vector2(148, -196)
-scale = Vector2(2.3925, 6.0366664)
+position = Vector2(148, -229.24998)
+scale = Vector2(2.3925, 5.8149996)
 texture = ExtResource("6_p4u3k")
 
 [node name="Checkpoints" type="Node" parent="."]
@@ -2109,3 +2110,59 @@ position = Vector2(5250, -142)
 
 [node name="checkpoint5" parent="Checkpoints" instance=ExtResource("8_p4u3k")]
 position = Vector2(7607, -238)
+
+[node name="cookies" type="Node" parent="."]
+
+[node name="Cookie" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(383, -153)
+
+[node name="Cookie2" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(413, -153)
+
+[node name="Cookie3" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(616, -165)
+
+[node name="Cookie4" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(1303, -319)
+
+[node name="Cookie5" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(1862, -524)
+
+[node name="Cookie6" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(1991, -525)
+
+[node name="Cookie7" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(2121, -529)
+
+[node name="Cookie8" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(3110, -441)
+
+[node name="Cookie9" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(2731, -206)
+
+[node name="Cookie10" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(2764, -207)
+
+[node name="Cookie11" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(2801, -207)
+
+[node name="Cookie12" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(3030, -210)
+
+[node name="Cookie13" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(3696, -214)
+
+[node name="Cookie14" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(5858, -127)
+
+[node name="Cookie15" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(5900, -128)
+
+[node name="Cookie16" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(6471, -205)
+
+[node name="Cookie17" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(7863, -292)
+
+[node name="Cookie18" parent="cookies" instance=ExtResource("9_70df5")]
+position = Vector2(8474, -200)
