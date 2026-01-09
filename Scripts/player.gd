@@ -7,8 +7,13 @@ const JUMP_VELOCITY = -300.0
 @onready var animated_sprite = $AnimatedSprite2D
 
 # Añade esta variable al inicio de tu script
+var is_alive = true
 var debug_mode := false
 var debug_speed := 300.0  # Velocidad del movimiento libre
+
+func die():
+	print("Ejecutando player.die...")
+	is_alive = false
 
 func _physics_process(delta: float) -> void:
 	# Activar/desactivar modo debug con una tecla (por ejemplo F3)
@@ -36,17 +41,20 @@ func _physics_process(delta: float) -> void:
 		elif velocity.x < 0:
 			animated_sprite.flip_h = true
 		
-		animated_sprite.play("idle")  # O "run" si prefieres
+		if not is_alive:
+			animated_sprite.play("die")  # O "run" si prefieres
+		else:
+			animated_sprite.play("idle")  # O "run" si prefieres
 		move_and_slide()
 		return  # Salir de la función, ignorar el resto del código
 	
 	# MODO NORMAL - Tu código original
 	# Add the gravity.
-	if not is_on_floor():
+	if (not is_on_floor()) and is_alive:
 		velocity += get_gravity() * delta
 	
 	# Handle jump.
-	if Input.is_action_just_pressed("jump") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor() and is_alive:
 		velocity.y = JUMP_VELOCITY
 	
 	# Get input direction: -1, 0, 1
@@ -59,7 +67,9 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.flip_h = true
 	
 	# Play animations
-	if is_on_floor():
+	if not is_alive:
+		animated_sprite.play("die")
+	elif is_on_floor():
 		if direction == 0:
 			animated_sprite.play("idle")
 		else:
@@ -68,12 +78,12 @@ func _physics_process(delta: float) -> void:
 		animated_sprite.play("jump")
 	
 	# Apply movement
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	
-	move_and_slide()
+	if is_alive:
+		if direction:
+			velocity.x = direction * SPEED
+		else:
+			velocity.x = move_toward(velocity.x, 0, SPEED)
+		move_and_slide()
 	
 
 #funcion original

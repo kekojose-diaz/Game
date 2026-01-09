@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=4 uid="uid://fbfggud2t5qm"]
+[gd_scene load_steps=43 format=4 uid="uid://fbfggud2t5qm"]
 
 [ext_resource type="Script" uid="uid://ddrijdxlrpei3" path="res://Scripts/level_1.gd" id="1_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://cp82rlofv87ro" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/oak_woods_tileset.png" id="2_03od6"]
@@ -3356,8 +3356,12 @@ position = Vector2(6613.75, -401.5)
 scale = Vector2(0.6111111, 1.25)
 texture = ExtResource("18_3ybmp")
 
-[node name="Area2D" parent="Decorations" instance=ExtResource("23_03od6")]
+[node name="Portal" parent="Decorations" instance=ExtResource("23_03od6")]
 position = Vector2(6729, -414)
+NEXT_LEVEL = "uid://cfrr8weerucoy"
+
+[node name="Portal2" parent="Decorations" instance=ExtResource("23_03od6")]
+position = Vector2(256, -63)
 NEXT_LEVEL = "uid://cfrr8weerucoy"
 
 [node name="Foxes" type="Node" parent="."]
@@ -3476,6 +3480,7 @@ position = Vector2(4298, -296)
 
 [node name="checkpoint4" parent="Checkpoint" instance=ExtResource("26_o0dvq")]
 position = Vector2(5737, -200)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 2
 
