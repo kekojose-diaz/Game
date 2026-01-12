@@ -1,4 +1,11 @@
 extends Node2D
+#Errror de la musica: Se reinicia la musica al morir antes de coger un checkpoint.
+#Error de el personaje: Al morir despues de haber cogido un checkpoint, se vuelve rojo y no se mueve.
+#Error del background: todavia funciona un poco mal aun, pero te lo dejo pasar
+
+
+
+
 
 @onready var label_score: Label = %LabelScore
 var audioPlayer : AudioStreamPlayer

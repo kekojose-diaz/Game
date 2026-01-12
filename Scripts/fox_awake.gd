@@ -1,6 +1,6 @@
 extends Node2D
 
-const SPEED = 60
+const SPEED = 80
 var sleeping = true
 var direction = 1
 
