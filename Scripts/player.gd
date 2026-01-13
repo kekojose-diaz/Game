@@ -14,6 +14,10 @@ var debug_speed := 300.0  # Velocidad del movimiento libre
 func die():
 	print("Ejecutando player.die...")
 	is_alive = false
+	
+func idle():
+	print("Ejecutando player.idle...")
+	is_alive = true
 
 func _physics_process(delta: float) -> void:
 	# Activar/desactivar modo debug con una tecla (por ejemplo F3)
