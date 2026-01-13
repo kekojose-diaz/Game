@@ -2140,17 +2140,17 @@ autoplay = "move"
 [node name="Back1" type="Parallax2D" parent="Background"]
 z_index = -50
 scroll_scale = Vector2(0.4, 1)
-repeat_size = Vector2(915, 0)
+repeat_size = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back1"]
-position = Vector2(525, -230.99997)
-scale = Vector2(3.5, 6.986667)
+position = Vector2(525, -300)
+scale = Vector2(3.5, 5)
 texture = ExtResource("5_ehjmi")
 
 [node name="Back 2" type="Parallax2D" parent="Background"]
 z_index = -5
 scroll_scale = Vector2(0.8, 1)
-repeat_size = Vector2(915, 0)
+repeat_size = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back 2"]
 position = Vector2(525, -329.00003)
