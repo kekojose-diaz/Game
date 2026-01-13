@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=4 uid="uid://cfrr8weerucoy"]
+[gd_scene load_steps=50 format=4 uid="uid://cfrr8weerucoy"]
 
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="1_ms0wi"]
 [ext_resource type="Script" uid="uid://cgq3i0mgrsy2" path="res://Scripts/level_2.gd" id="1_p4u3k"]
@@ -10,6 +10,10 @@
 [ext_resource type="PackedScene" uid="uid://b18l4i78yaakm" path="res://Scenes/checkpoint.tscn" id="8_p4u3k"]
 [ext_resource type="PackedScene" uid="uid://c1qjcyrtep8w6" path="res://Scenes/cookie.tscn" id="9_70df5"]
 [ext_resource type="Texture2D" uid="uid://62c2eqfup607" path="res://Assets/Cookie/Cookie_rotating.png" id="10_ejprb"]
+[ext_resource type="PackedScene" uid="uid://b22c5jfwth46v" path="res://Scenes/fox.tscn" id="11_au75x"]
+[ext_resource type="PackedScene" uid="uid://ijca8fofws8r" path="res://Scenes/fox_no_moving.tscn" id="12_1je60"]
+[ext_resource type="PackedScene" uid="uid://dsna0mdwfhi0q" path="res://Scenes/wolf_awake.tscn" id="13_ycmr1"]
+[ext_resource type="PackedScene" uid="uid://twf1dsa604ib" path="res://Scenes/fox_awake.tscn" id="14_ycmr1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkyht"]
 texture = ExtResource("3_n3cqh")
@@ -1636,7 +1640,8 @@ texture = ExtResource("3_n3cqh")
 54:41/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_8hre3"]
-physics_layer_0/collision_layer = 1
+physics_layer_0/collision_layer = 3
+physics_layer_0/collision_mask = 3
 sources/0 = SubResource("TileSetAtlasSource_kkyht")
 
 [sub_resource type="Animation" id="Animation_n3cqh"]
@@ -2148,8 +2153,8 @@ scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(915, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Back 2"]
-position = Vector2(525, -336.25006)
-scale = Vector2(3.5, 5.825)
+position = Vector2(525, -329.00003)
+scale = Vector2(3.5, 7.2933335)
 texture = ExtResource("6_p4u3k")
 
 [node name="Checkpoints" type="Node" parent="."]
@@ -2161,10 +2166,10 @@ position = Vector2(1477, -334)
 position = Vector2(3530, -382)
 
 [node name="checkpoint3" parent="Checkpoints" instance=ExtResource("8_p4u3k")]
-position = Vector2(3239, -191)
+position = Vector2(3358, -193)
 
 [node name="checkpoint4" parent="Checkpoints" instance=ExtResource("8_p4u3k")]
-position = Vector2(5250, -142)
+position = Vector2(4739, -111)
 
 [node name="checkpoint5" parent="Checkpoints" instance=ExtResource("8_p4u3k")]
 position = Vector2(7607, -238)
@@ -2284,3 +2289,87 @@ position = Vector2(4449, 50)
 shape = SubResource("RectangleShape2D_kkyht")
 
 [node name="Enemies" type="Node" parent="."]
+
+[node name="Fox moving" parent="Enemies" instance=ExtResource("11_au75x")]
+position = Vector2(702, -183)
+
+[node name="fox No moving" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(478, -144)
+
+[node name="fox No moving2" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(246, -144)
+
+[node name="Fox moving2" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(2710, -217)
+
+[node name="Fox moving3" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(2803, -217)
+
+[node name="Fox moving4" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(2974, -217)
+
+[node name="Fox moving5" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(3086, -217)
+
+[node name="Fox moving6" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(3189, -217)
+
+[node name="Fox moving7" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(5895, -137)
+
+[node name="Fox moving8" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(6319, -137)
+
+[node name="Fox moving9" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(6203, -137)
+
+[node name="fox No moving3" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(8205, -288)
+
+[node name="fox No moving4" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(8672, -225)
+
+[node name="Fox moving10" parent="Enemies" instance=ExtResource("14_ycmr1")]
+position = Vector2(6834, -247)
+
+[node name="fox No moving5" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(6872, -240)
+
+[node name="Fox moving11" parent="Enemies" instance=ExtResource("11_au75x")]
+position = Vector2(7037, -247)
+
+[node name="Fox moving12" parent="Enemies" instance=ExtResource("14_ycmr1")]
+position = Vector2(6689, -247)
+
+[node name="Fox moving13" parent="Enemies" instance=ExtResource("13_ycmr1")]
+position = Vector2(4955, -169)
+
+[node name="fox No moving6" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(5172, -160)
+
+[node name="fox No moving7" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(5133, -160)
+
+[node name="Fox moving14" parent="Enemies" instance=ExtResource("14_ycmr1")]
+position = Vector2(5101, -167)
+
+[node name="fox No moving8" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(1176, -288)
+
+[node name="Fox moving15" parent="Enemies" instance=ExtResource("11_au75x")]
+position = Vector2(2552, -359)
+
+[node name="Fox moving16" parent="Enemies" instance=ExtResource("11_au75x")]
+position = Vector2(2693, -391)
+
+[node name="Fox moving17" parent="Enemies" instance=ExtResource("11_au75x")]
+position = Vector2(2923, -391)
+
+[node name="fox No moving9" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(3020, -415)
+
+[node name="fox No moving10" parent="Enemies" instance=ExtResource("12_1je60")]
+position = Vector2(3228, -400)
+
+[node name="Fox moving18" parent="Enemies" instance=ExtResource("14_ycmr1")]
+position = Vector2(3268, -407)
