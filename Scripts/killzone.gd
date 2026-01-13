@@ -19,6 +19,7 @@ func _on_timer_timeout() -> void:
 		print("Intento conseguir el player")
 		player =  get_tree().current_scene.get_node("Player")
 	if player != null:
+		get_tree().call_group("Player","idle")
 		player.position = GameManager.respawn_point
 		print("New player position: (" + str(player.position.x) + "," + str(player.position.y) + ")")
 	else:

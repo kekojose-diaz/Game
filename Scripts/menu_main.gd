@@ -1,6 +1,9 @@
 extends Control
 
-
+func _ready() -> void:
+	var musica_menu = preload("res://Assets/Music/Cuddle Clouds.mp3")
+	AudioManager.play_music(musica_menu)	
+	
 func _on_b_play_pressed() -> void:
 	TransitionScene.transition(false)
 	await TransitionScene._on_transition_finished
