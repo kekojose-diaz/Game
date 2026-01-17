@@ -2731,15 +2731,16 @@ tile_map_data = PackedByteArray("AAD+/wEAAAABAAAAAAD//wEAAAABAAAAAAAAAAEAAAABAAA
 tile_set = SubResource("TileSet_3dryh")
 
 [node name="Player" parent="." instance=ExtResource("3_384de")]
+z_index = 50
 position = Vector2(486, -67)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(12, 27)
 zoom = Vector2(2, 2)
 limit_left = -9999970
-limit_top = -822
+limit_top = -835
 limit_right = 10000030
-limit_bottom = 117
+limit_bottom = 102
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." instance=ExtResource("4_bhaf5")]
