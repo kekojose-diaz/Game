@@ -6,6 +6,7 @@ var player = null
   
 func _on_body_entered(_body: Node2D) -> void:
 	print("You died!!!")
+	print("Colisión con KillZone: ", self.name)
 	Engine.time_scale = 0.5
 	get_tree().call_group("Player","die")
 	#body.get_node("CollisionShape2D").queue_free();

@@ -1,0 +1,105 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwcly2q6b5wd4"]
+
+[ext_resource type="Script" uid="uid://d2w8q6ab1fhaj" path="res://fish.gd" id="1_4fqy1"]
+[ext_resource type="Texture2D" uid="uid://b82l0okrs2ace" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Fish - 7F.png" id="2_4fqy1"]
+[ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="3_jdl8t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urn1o"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(0, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdl8t"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(29, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21uvr"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(58, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csmc7"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(87, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkfiq"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(116, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fl3e6"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(145, 0, 29, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clm4a"]
+atlas = ExtResource("2_4fqy1")
+region = Rect2(174, 0, 29, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd48r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urn1o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdl8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21uvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csmc7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkfiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fl3e6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clm4a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
+size = Vector2(5.0000005, 18)
+
+[node name="fish" type="Node2D"]
+z_index = 5
+script = ExtResource("1_4fqy1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.713456, 17.547037)
+scale = Vector2(-0.86567014, 0.7847093)
+sprite_frames = SubResource("SpriteFrames_sd48r")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="killzone" parent="." instance=ExtResource("3_jdl8t")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(9, 17)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e6g21")
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(12, 21)
+target_position = Vector2(-19, 0)
+collision_mask = 2
+
+[node name="RayCast_down_left" type="RayCast2D" parent="."]
+position = Vector2(1, 18)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_down_right" type="RayCast2D" parent="."]
+position = Vector2(18, 18)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(10, 21)
+target_position = Vector2(16, 0)
+collision_mask = 2
