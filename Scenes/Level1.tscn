@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://fbfggud2t5qm"]
+[gd_scene load_steps=45 format=4 uid="uid://fbfggud2t5qm"]
 
 [ext_resource type="Script" uid="uid://ddrijdxlrpei3" path="res://Scripts/level_1.gd" id="1_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://cp82rlofv87ro" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/oak_woods_tileset.png" id="2_03od6"]
@@ -25,7 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://ijca8fofws8r" path="res://Scenes/fox_no_moving.tscn" id="21_3ocbn"]
 [ext_resource type="PackedScene" uid="uid://c1qjcyrtep8w6" path="res://Scenes/cookie.tscn" id="22_ghekl"]
 [ext_resource type="PackedScene" uid="uid://d0af1flsbjxqh" path="res://Scenes/portal.tscn" id="23_03od6"]
+[ext_resource type="PackedScene" uid="uid://dsna0mdwfhi0q" path="res://Scenes/wolf_awake.tscn" id="25_bqkvc"]
 [ext_resource type="PackedScene" uid="uid://b18l4i78yaakm" path="res://Scenes/checkpoint.tscn" id="26_o0dvq"]
+[ext_resource type="PackedScene" uid="uid://twf1dsa604ib" path="res://Scenes/fox_awake.tscn" id="27_1nrjw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_03od6")
@@ -3376,12 +3378,6 @@ position = Vector2(3087, -321)
 [node name="Fox3" parent="Foxes" instance=ExtResource("20_okut1")]
 position = Vector2(3570, -593)
 
-[node name="Fox4" parent="Foxes" instance=ExtResource("20_okut1")]
-position = Vector2(4710, -113)
-
-[node name="fox No moving" parent="Foxes" instance=ExtResource("21_3ocbn")]
-position = Vector2(4184, -312)
-
 [node name="fox No moving2" parent="Foxes" instance=ExtResource("21_3ocbn")]
 position = Vector2(3449, -584)
 
@@ -3399,6 +3395,36 @@ position = Vector2(6277, -409)
 
 [node name="fox No moving6" parent="Foxes" instance=ExtResource("21_3ocbn")]
 position = Vector2(6316, -409)
+
+[node name="fox No moving" parent="Foxes" instance=ExtResource("21_3ocbn")]
+position = Vector2(768, -138)
+
+[node name="Fox moving2" parent="Foxes" instance=ExtResource("20_okut1")]
+position = Vector2(1457, -113)
+
+[node name="Fox moving3" parent="Foxes" instance=ExtResource("27_1nrjw")]
+position = Vector2(4192, -321)
+
+[node name="Fox moving4" parent="Foxes" instance=ExtResource("25_bqkvc")]
+position = Vector2(4686, -387)
+
+[node name="Fox moving5" parent="Foxes" instance=ExtResource("25_bqkvc")]
+position = Vector2(4752, -114)
+
+[node name="Fox moving6" parent="Foxes" instance=ExtResource("25_bqkvc")]
+position = Vector2(4863, -114)
+
+[node name="fox No moving7" parent="Foxes" instance=ExtResource("21_3ocbn")]
+position = Vector2(5389, -218)
+
+[node name="Fox moving7" parent="Foxes" instance=ExtResource("20_okut1")]
+position = Vector2(5272, -225)
+
+[node name="fox No moving8" parent="Foxes" instance=ExtResource("21_3ocbn")]
+position = Vector2(5101, -186)
+
+[node name="Fox moving8" parent="Foxes" instance=ExtResource("20_okut1")]
+position = Vector2(6071, -417)
 
 [node name="Cookies" type="Node" parent="."]
 
@@ -3468,6 +3494,9 @@ position = Vector2(6288, -430)
 [node name="Cookie22" parent="Cookies" instance=ExtResource("22_ghekl")]
 position = Vector2(6323, -430)
 
+[node name="Cookie23" parent="Cookies" instance=ExtResource("22_ghekl")]
+position = Vector2(4754, -376)
+
 [node name="Checkpoint" type="Node" parent="."]
 
 [node name="checkpoint" parent="Checkpoint" instance=ExtResource("26_o0dvq")]
@@ -3477,7 +3506,7 @@ position = Vector2(1949, -216)
 position = Vector2(2929, -521)
 
 [node name="checkpoint3" parent="Checkpoint" instance=ExtResource("26_o0dvq")]
-position = Vector2(4298, -296)
+position = Vector2(4514, -361)
 
 [node name="checkpoint4" parent="Checkpoint" instance=ExtResource("26_o0dvq")]
 position = Vector2(5737, -200)

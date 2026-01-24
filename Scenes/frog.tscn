@@ -1,0 +1,126 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhsfg7d6f1tdr"]
+
+[ext_resource type="Script" uid="uid://c76phiyo6adth" path="res://Scripts/frog.gd" id="1_c3muq"]
+[ext_resource type="Texture2D" uid="uid://bbsv7w85nwbor" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Frog - 14F.png" id="2_c3muq"]
+[ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="3_anyvr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvrdk"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(351, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anyvr"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(324, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hdff1"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(297, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbuj8"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(270, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igvty"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(243, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_poaat"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(216, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oox6q"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(189, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5bqyd"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(162, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3onm"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(135, 0, 27, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx6eh"]
+atlas = ExtResource("2_c3muq")
+region = Rect2(108, 0, 27, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd48r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvrdk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anyvr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hdff1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbuj8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igvty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_poaat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oox6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5bqyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3onm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx6eh")
+}],
+"loop": true,
+"name": &"run",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
+size = Vector2(14, 23)
+
+[node name="frog" type="Node2D"]
+z_index = 5
+script = ExtResource("1_c3muq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(24, 15.000001)
+scale = Vector2(-1.0042329, 1.1338899)
+sprite_frames = SubResource("SpriteFrames_sd48r")
+animation = &"run"
+autoplay = "run"
+
+[node name="killzone" parent="." instance=ExtResource("3_anyvr")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(23.5, 18)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e6g21")
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(28, 19)
+target_position = Vector2(-22, 0)
+collision_mask = 2
+
+[node name="RayCast_down_left" type="RayCast2D" parent="."]
+position = Vector2(15, 19)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_down_right" type="RayCast2D" parent="."]
+position = Vector2(32, 18)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(24, 19)
+target_position = Vector2(16, 0)
+collision_mask = 2

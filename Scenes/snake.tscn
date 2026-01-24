@@ -1,0 +1,98 @@
+[gd_scene load_steps=12 format=3 uid="uid://pxq2ux6vetjb"]
+
+[ext_resource type="Script" uid="uid://bhhk62dqdhscl" path="res://Scripts/snake.gd" id="1_rku0m"]
+[ext_resource type="Texture2D" uid="uid://biqodi45epp5v" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Snake - 6F.png" id="2_rku0m"]
+[ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="3_pnn8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmvgn"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(0, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pnn8g"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(23, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p48en"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(46, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tu6o"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(69, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1exp"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(92, 0, 23, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpoka"]
+atlas = ExtResource("2_rku0m")
+region = Rect2(115, 0, 23, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sd48r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmvgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pnn8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p48en")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6tu6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1exp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpoka")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
+size = Vector2(12.500001, 36)
+
+[node name="snake" type="Node2D"]
+z_index = 5
+script = ExtResource("1_rku0m")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(16.5, 12.412355)
+scale = Vector2(1.6086956, 1.4265444)
+sprite_frames = SubResource("SpriteFrames_sd48r")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="killzone" parent="." instance=ExtResource("3_pnn8g")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(17, 17.25)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e6g21")
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(15, 18)
+target_position = Vector2(-22, 1)
+collision_mask = 2
+
+[node name="RayCast_down_left" type="RayCast2D" parent="."]
+position = Vector2(2, 18)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_down_right" type="RayCast2D" parent="."]
+position = Vector2(32, 18)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(25, 19)
+target_position = Vector2(16, 0)
+collision_mask = 2
