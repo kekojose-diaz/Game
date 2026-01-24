@@ -2022,7 +2022,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_au75x"]
-size = Vector2(42, 16)
+size = Vector2(40, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kkyht"]
 size = Vector2(9183, 20)
@@ -2031,15 +2031,15 @@ size = Vector2(9183, 20)
 script = ExtResource("1_p4u3k")
 
 [node name="Player" parent="." instance=ExtResource("2_5awjf")]
-position = Vector2(151, -155)
+position = Vector2(115, -155)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-3, 7)
+position = Vector2(-1, 5)
 zoom = Vector2(2, 2)
-limit_left = -9999973
-limit_top = -803
-limit_right = 10000027
-limit_bottom = 14
+limit_left = -9999933
+limit_top = -781
+limit_right = 10000067
+limit_bottom = 36
 rotation_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -2189,7 +2189,7 @@ repeat_size = Vector2(1400, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Background/Parallax2D3"]
 z_index = -200
-position = Vector2(703, -365)
+position = Vector2(701, -375.00003)
 scale = Vector2(1.5931818, 3.7704918)
 texture = ExtResource("9_utdxf")
 
@@ -2301,7 +2301,7 @@ text = "0 / 20"
 position = Vector2(6470, -155)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzones/killzone4"]
-position = Vector2(1, 1)
+position = Vector2(2, -2)
 shape = SubResource("RectangleShape2D_au75x")
 
 [node name="killzone" parent="Killzones" instance=ExtResource("1_ms0wi")]
@@ -2313,19 +2313,19 @@ shape = SubResource("RectangleShape2D_kkyht")
 [node name="Enemies" type="Node" parent="."]
 
 [node name="wolf 1" parent="Enemies" instance=ExtResource("13_ycmr1")]
-position = Vector2(2710, -217)
+position = Vector2(2711, -219)
 
 [node name="wolf 2" parent="Enemies" instance=ExtResource("13_ycmr1")]
-position = Vector2(2803, -217)
+position = Vector2(2803, -219)
 
 [node name="wolf 3" parent="Enemies" instance=ExtResource("13_ycmr1")]
-position = Vector2(2974, -217)
+position = Vector2(2974, -219)
 
 [node name="wolf 4" parent="Enemies" instance=ExtResource("13_ycmr1")]
-position = Vector2(3086, -217)
+position = Vector2(3086, -219)
 
 [node name="wolf 5" parent="Enemies" instance=ExtResource("13_ycmr1")]
-position = Vector2(3189, -217)
+position = Vector2(3189, -219)
 
 [node name="fish2" parent="Enemies" instance=ExtResource("15_2jwna")]
 position = Vector2(359, -91)
@@ -2334,88 +2334,88 @@ position = Vector2(359, -91)
 position = Vector2(3016, -361)
 
 [node name="snake3" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(697, -183)
+position = Vector2(697, -185)
 
 [node name="snake4" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(5880, -135)
+position = Vector2(5880, -137)
 
 [node name="snake5" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(6171, -135)
+position = Vector2(6171, -138)
 
 [node name="snake7" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(8170, -295)
+position = Vector2(8168, -298)
 
 [node name="snake8" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(7432, -262)
+position = Vector2(7432, -266)
 
 [node name="snake9" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(7073, -264)
+position = Vector2(7074, -265)
 
 [node name="snake10" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(7142, -263)
+position = Vector2(7142, -265)
 
 [node name="snake11" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(7300, -263)
+position = Vector2(7304, -266)
 
 [node name="snake15" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(4858, -167)
+position = Vector2(4859, -170)
 
 [node name="snake16" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(5285, -168)
+position = Vector2(5285, -170)
 
 [node name="snake17" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(4969, -167)
+position = Vector2(4969, -170)
 
 [node name="snake18" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(5061, -167)
+position = Vector2(5061, -170)
 
 [node name="snake19" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(5163, -167)
+position = Vector2(5163, -170)
 
 [node name="snake21" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(2251, -327)
+position = Vector2(2252, -330)
 
 [node name="snake22" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(2462, -328)
+position = Vector2(2460, -330)
 
 [node name="snake24" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(2691, -392)
+position = Vector2(2691, -394)
 
 [node name="snake26" parent="Enemies" instance=ExtResource("17_xx40l")]
-position = Vector2(3218, -408)
+position = Vector2(3218, -410)
 
 [node name="snake6" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(2980, -425)
+position = Vector2(2979, -427)
 
 [node name="snake12" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(2546, -361)
+position = Vector2(2546, -363)
 
 [node name="snake13" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(6484, -217)
+position = Vector2(6484, -219)
 
 [node name="snake14" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(6552, -217)
+position = Vector2(6552, -219)
 
 [node name="snake" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(439, -153)
+position = Vector2(439, -155)
 
 [node name="snake2" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(213, -153)
+position = Vector2(213, -155)
 
 [node name="snake20" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(3860, -297)
+position = Vector2(3861, -299)
 
 [node name="snake23" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(3367, -408)
+position = Vector2(3367, -410)
 
 [node name="snake25" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(7019, -249)
+position = Vector2(7019, -251)
 
 [node name="snake27" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(2911, -392)
+position = Vector2(2909, -395)
 
 [node name="snake28" parent="Enemies" instance=ExtResource("15_sgc6j")]
-position = Vector2(6783, -248)
+position = Vector2(6783, -251)
 
 [node name="Portal" parent="." instance=ExtResource("16_sgc6j")]
 z_index = 50
