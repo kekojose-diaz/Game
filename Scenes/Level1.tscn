@@ -3396,9 +3396,6 @@ position = Vector2(6277, -409)
 [node name="fox No moving6" parent="Foxes" instance=ExtResource("21_3ocbn")]
 position = Vector2(6316, -409)
 
-[node name="fox No moving" parent="Foxes" instance=ExtResource("21_3ocbn")]
-position = Vector2(768, -138)
-
 [node name="Fox moving2" parent="Foxes" instance=ExtResource("20_okut1")]
 position = Vector2(1457, -113)
 
