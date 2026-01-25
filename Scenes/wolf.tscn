@@ -1,0 +1,85 @@
+[gd_scene load_steps=10 format=3 uid="uid://yd4px8qqh0yx"]
+
+[ext_resource type="Script" uid="uid://dtagc8ipp5edp" path="res://Scripts/wolf.gd" id="1_gl83b"]
+[ext_resource type="Texture2D" uid="uid://diecal0cja2kw" path="res://Assets/Enemies/Wolf/WolfSprites.png" id="2_gl83b"]
+[ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="3_dg0fm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea5w3"]
+atlas = ExtResource("2_gl83b")
+region = Rect2(0, 46, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dg0fm"]
+atlas = ExtResource("2_gl83b")
+region = Rect2(32, 46, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrsx1"]
+atlas = ExtResource("2_gl83b")
+region = Rect2(64, 46, 32, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_giv74"]
+atlas = ExtResource("2_gl83b")
+region = Rect2(96, 46, 32, 23)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kbn5l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ea5w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dg0fm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xrsx1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_giv74")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
+size = Vector2(10.500002, 24.75)
+
+[node name="wolf moving" type="Node2D"]
+z_index = 5
+script = ExtResource("1_gl83b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(11.000003, 11.5234375)
+scale = Vector2(1.625, 1.5237771)
+sprite_frames = SubResource("SpriteFrames_kbn5l")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.9928295
+
+[node name="killzone" parent="." instance=ExtResource("3_dg0fm")]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
+position = Vector2(10, 15)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_e6g21")
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+position = Vector2(9, 16)
+target_position = Vector2(-17, 0)
+collision_mask = 2
+
+[node name="RayCast_down_left" type="RayCast2D" parent="."]
+position = Vector2(1, 15)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_down_right" type="RayCast2D" parent="."]
+position = Vector2(19, 15)
+target_position = Vector2(0, 11)
+collision_mask = 2
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+position = Vector2(12, 16)
+target_position = Vector2(16, 0)
+collision_mask = 2

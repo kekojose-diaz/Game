@@ -55,15 +55,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
-size = Vector2(12.500001, 36)
+size = Vector2(9.500002, 32)
 
 [node name="snake" type="Node2D"]
 z_index = 5
 script = ExtResource("1_rku0m")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(16.5, 12.412355)
-scale = Vector2(1.6086956, 1.4265444)
+position = Vector2(12.625, 14.353089)
+scale = Vector2(1.5108694, 1.1691362)
 sprite_frames = SubResource("SpriteFrames_sd48r")
 animation = &"idle"
 autoplay = "idle"
@@ -73,7 +73,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(17, 17.25)
+position = Vector2(15, 18.75)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_e6g21")
 
@@ -88,11 +88,11 @@ target_position = Vector2(0, 11)
 collision_mask = 2
 
 [node name="RayCast_down_right" type="RayCast2D" parent="."]
-position = Vector2(32, 18)
+position = Vector2(27, 18)
 target_position = Vector2(0, 11)
 collision_mask = 2
 
 [node name="RayCast_right" type="RayCast2D" parent="."]
-position = Vector2(25, 19)
+position = Vector2(21, 18)
 target_position = Vector2(16, 0)
 collision_mask = 2
