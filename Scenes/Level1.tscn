@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://fbfggud2t5qm"]
+[gd_scene load_steps=46 format=4 uid="uid://fbfggud2t5qm"]
 
 [ext_resource type="Script" uid="uid://ddrijdxlrpei3" path="res://Scripts/level_1.gd" id="1_fh0sh"]
 [ext_resource type="Texture2D" uid="uid://cp82rlofv87ro" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/oak_woods_tileset.png" id="2_03od6"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://dsna0mdwfhi0q" path="res://Scenes/wolf_awake.tscn" id="25_bqkvc"]
 [ext_resource type="PackedScene" uid="uid://b18l4i78yaakm" path="res://Scenes/checkpoint.tscn" id="26_o0dvq"]
 [ext_resource type="PackedScene" uid="uid://twf1dsa604ib" path="res://Scenes/fox_awake.tscn" id="27_1nrjw"]
+[ext_resource type="PackedScene" uid="uid://yd4px8qqh0yx" path="res://Scenes/wolf.tscn" id="29_iswit"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_03od6")
@@ -3372,9 +3373,6 @@ NEXT_LEVEL = "uid://cfrr8weerucoy"
 [node name="Fox" parent="Foxes" instance=ExtResource("20_okut1")]
 position = Vector2(1269, -113)
 
-[node name="Fox2" parent="Foxes" instance=ExtResource("20_okut1")]
-position = Vector2(3087, -321)
-
 [node name="Fox3" parent="Foxes" instance=ExtResource("20_okut1")]
 position = Vector2(3570, -593)
 
@@ -3422,6 +3420,9 @@ position = Vector2(5101, -186)
 
 [node name="Fox moving8" parent="Foxes" instance=ExtResource("20_okut1")]
 position = Vector2(6071, -417)
+
+[node name="wolf moving" parent="Foxes" instance=ExtResource("29_iswit")]
+position = Vector2(3087, -320)
 
 [node name="Cookies" type="Node" parent="."]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://dsna0mdwfhi0q"]
 
-[ext_resource type="Script" uid="uid://cclg2yvp4uuyw" path="res://Scripts/fox_awake.gd" id="1_d8lod"]
+[ext_resource type="Script" uid="uid://48bn7k7nbofl" path="res://Scripts/wolf_awake.gd" id="1_78qqm"]
 [ext_resource type="Texture2D" uid="uid://diecal0cja2kw" path="res://Assets/Enemies/Wolf/WolfSprites.png" id="2_78qqm"]
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="4_v2uhk"]
 
@@ -74,16 +74,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
-size = Vector2(9.000002, 23.5)
+size = Vector2(10.000001, 28)
 
-[node name="Fox moving" type="Node2D"]
+[node name="wolf awake" type="Node2D"]
 z_index = 4
-script = ExtResource("1_d8lod")
+script = ExtResource("1_78qqm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 5
-position = Vector2(10.499998, -1.5000036)
-scale = Vector2(1.65625, 1.6562498)
+position = Vector2(9.000001, -3.0000002)
+scale = Vector2(1.7187501, 1.7812499)
 sprite_frames = SubResource("SpriteFrames_kbn5l")
 animation = &"Walking"
 autoplay = "Sleeping"
@@ -94,7 +94,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(7.75, 16.5)
+position = Vector2(6.9999995, 16)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_e6g21")
 

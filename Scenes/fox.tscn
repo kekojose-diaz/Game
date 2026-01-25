@@ -41,15 +41,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e6g21"]
-size = Vector2(9.000002, 23.5)
+size = Vector2(10.500001, 26)
 
 [node name="Fox moving" type="Node2D"]
 z_index = 5
 script = ExtResource("3_yj2lq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(10.499998, -1.5000036)
-scale = Vector2(1.65625, 1.6562498)
+position = Vector2(12.5, -4.0000057)
+scale = Vector2(1.7812501, 1.8124998)
 sprite_frames = SubResource("SpriteFrames_kbn5l")
 animation = &"idle"
 autoplay = "idle"
@@ -60,26 +60,26 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="killzone"]
-position = Vector2(7.75, 16.5)
+position = Vector2(10, 15.25)
 rotation = 1.5707964
 shape = SubResource("RectangleShape2D_e6g21")
 
 [node name="RayCast_left" type="RayCast2D" parent="."]
-position = Vector2(11, 17)
+position = Vector2(8, 16)
 target_position = Vector2(-17, 0)
 collision_mask = 2
 
 [node name="RayCast_down_left" type="RayCast2D" parent="."]
-position = Vector2(-4, 17)
+position = Vector2(1, 16)
 target_position = Vector2(0, 11)
 collision_mask = 2
 
 [node name="RayCast_down_right" type="RayCast2D" parent="."]
-position = Vector2(18, 18)
+position = Vector2(19, 16)
 target_position = Vector2(0, 11)
 collision_mask = 2
 
 [node name="RayCast_right" type="RayCast2D" parent="."]
-position = Vector2(10, 17)
+position = Vector2(13, 16)
 target_position = Vector2(16, 0)
 collision_mask = 2
