@@ -5,6 +5,7 @@ var current_music = null
 
 func _ready():
 	add_child(music_player)
+	music_player.bus = "Music"
 
 # Función para cambiar la música
 func play_music(music_stream):
