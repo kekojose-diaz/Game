@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://pn6qygsmmled"]
 
 [ext_resource type="Script" uid="uid://b7wsp4ls30h07" path="res://Scripts/transition_scene.gd" id="1_72rgs"]
-[ext_resource type="AudioStream" uid="uid://dco5u00voayip" path="res://Assets/Sounds/teleport1.mp3" id="2_ytrps"]
+[ext_resource type="AudioStream" uid="uid://bvvg86kk2r0fh" path="res://Assets/Sounds/AudioTeletransportacionNuevo.mp3" id="2_ytrps"]
 
 [sub_resource type="Animation" id="Animation_a7285"]
 length = 0.001
@@ -30,8 +30,8 @@ tracks/1/keys = {
 "values": [false]
 }
 
-[sub_resource type="Animation" id="Animation_jvt32"]
-resource_name = "fade_to_normal"
+[sub_resource type="Animation" id="Animation_s5xav"]
+resource_name = "fade_to_black"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -43,7 +43,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ytrps"]
@@ -74,8 +74,8 @@ tracks/1/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_s5xav"]
-resource_name = "fade_to_black"
+[sub_resource type="Animation" id="Animation_jvt32"]
+resource_name = "fade_to_normal"
 length = 0.5
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -87,7 +87,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_s5xav"]
