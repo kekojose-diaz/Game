@@ -3364,10 +3364,6 @@ texture = ExtResource("18_3ybmp")
 position = Vector2(6729, -414)
 NEXT_LEVEL = "uid://cfrr8weerucoy"
 
-[node name="Portal2" parent="Decorations" instance=ExtResource("23_03od6")]
-position = Vector2(14, -65)
-NEXT_LEVEL = "uid://cfrr8weerucoy"
-
 [node name="Foxes" type="Node" parent="."]
 
 [node name="Fox" parent="Foxes" instance=ExtResource("20_okut1")]

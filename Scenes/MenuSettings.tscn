@@ -1,9 +1,16 @@
-[gd_scene load_steps=16 format=3 uid="uid://de6cogv5x5fuf"]
+[gd_scene load_steps=23 format=3 uid="uid://de6cogv5x5fuf"]
 
 [ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="1_n3yhl"]
 [ext_resource type="Script" uid="uid://bocvxbf5mncbo" path="res://Scripts/menu_settings.gd" id="1_svhn3"]
 [ext_resource type="PackedScene" uid="uid://dsw24gdoswe3" path="res://Scenes/VolumeSlider.tscn" id="2_svhn3"]
 [ext_resource type="AudioStream" uid="uid://eah1oodqe5co" path="res://Assets/Sounds/CookieSound.mp3" id="4_n8vx7"]
+[ext_resource type="Texture2D" uid="uid://cwbr03mi1do2" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_007.png" id="5_mthkl"]
+[ext_resource type="Texture2D" uid="uid://clnq8bu4qq02k" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_006.png" id="6_7mj0m"]
+[ext_resource type="Texture2D" uid="uid://5urfrmdpvykq" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_005.png" id="7_3pdpi"]
+[ext_resource type="Texture2D" uid="uid://q82av81c4p28" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_004.png" id="8_a8fu8"]
+[ext_resource type="Texture2D" uid="uid://car6rgalk0046" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_003.png" id="9_evujh"]
+[ext_resource type="Texture2D" uid="uid://bt1jc463qiqr1" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_002.png" id="10_h7riw"]
+[ext_resource type="Texture2D" uid="uid://di50wy3q4jg7t" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_001.png" id="11_hftgj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n8vx7"]
 bg_color = Color(1, 1, 1, 1)
@@ -205,6 +212,48 @@ text = "BACK"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_n8vx7")
 bus = &"SFX"
+
+[node name="BackGround007" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(578.50006, 321.99997)
+scale = Vector2(3.2361112, 3.6000001)
+texture = ExtResource("5_mthkl")
+
+[node name="BackGround006" type="Sprite2D" parent="."]
+z_index = -40
+position = Vector2(573, 319)
+scale = Vector2(3.3666663, 3.8999999)
+texture = ExtResource("6_7mj0m")
+
+[node name="BackGround005" type="Sprite2D" parent="."]
+z_index = -35
+position = Vector2(579, 325.00003)
+scale = Vector2(3.336111, 4.616667)
+texture = ExtResource("7_3pdpi")
+
+[node name="BackGround004" type="Sprite2D" parent="."]
+z_index = -30
+position = Vector2(565.00006, 332.00003)
+scale = Vector2(2.9305556, 3.5430555)
+texture = ExtResource("8_a8fu8")
+
+[node name="BackGround003" type="Sprite2D" parent="."]
+z_index = -25
+position = Vector2(575, 320.5)
+scale = Vector2(3.222222, 3.6055553)
+texture = ExtResource("9_evujh")
+
+[node name="BackGround002" type="Sprite2D" parent="."]
+z_index = -20
+position = Vector2(577.99994, 321.5)
+scale = Vector2(3.1944442, 3.6055558)
+texture = ExtResource("10_h7riw")
+
+[node name="BackGround001" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(575, 323.50003)
+scale = Vector2(3.211111, 3.5722225)
+texture = ExtResource("11_hftgj")
 
 [connection signal="drag_ended" from="SfxSlider" to="." method="_on_sfx_slider_drag_ended"]
 [connection signal="pressed" from="BBack" to="." method="_on_b_back_pressed"]
