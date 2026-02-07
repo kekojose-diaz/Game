@@ -12,8 +12,8 @@ dest_files=["res://.godot/imported/Golden Gleam.mp3-300f2183f91269ab24b98912b225
 
 [params]
 
-loop=false
-loop_offset=0
-bpm=0
+loop=true
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4

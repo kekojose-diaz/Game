@@ -1,10 +1,14 @@
-[gd_scene load_steps=18 format=3 uid="uid://btfwxbh8s0tj6"]
+[gd_scene load_steps=22 format=3 uid="uid://btfwxbh8s0tj6"]
 
 [ext_resource type="Script" uid="uid://mjmnqv1kqcic" path="res://Scripts/menu_main.gd" id="1_a20kb"]
 [ext_resource type="FontFile" uid="uid://co6owd56d1wdh" path="res://Assets/Fonts/Round9x13.ttf" id="2_a2g4b"]
-[ext_resource type="Texture2D" uid="uid://cakf2dfgekuuh" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_1.png" id="2_e4edp"]
-[ext_resource type="Texture2D" uid="uid://ch0b4im8pm0am" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_2.png" id="3_g8p52"]
-[ext_resource type="Texture2D" uid="uid://duijk6iv3vsvo" path="res://Assets/TileSets/TileSet - oak_woods_v1.0/background/background_layer_3.png" id="4_v5ntl"]
+[ext_resource type="Texture2D" uid="uid://cwbr03mi1do2" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_007.png" id="3_41g87"]
+[ext_resource type="Texture2D" uid="uid://clnq8bu4qq02k" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_006.png" id="4_1drt4"]
+[ext_resource type="Texture2D" uid="uid://5urfrmdpvykq" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_005.png" id="5_6ji8p"]
+[ext_resource type="Texture2D" uid="uid://q82av81c4p28" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_004.png" id="6_2knbe"]
+[ext_resource type="Texture2D" uid="uid://car6rgalk0046" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_003.png" id="7_8npvd"]
+[ext_resource type="Texture2D" uid="uid://bt1jc463qiqr1" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_002.png" id="8_av13w"]
+[ext_resource type="Texture2D" uid="uid://di50wy3q4jg7t" path="res://Assets/Backgrounds/Forest Pixel Art/PNG/Layers/BackGround_001.png" id="9_xeird"]
 
 [sub_resource type="SystemFont" id="SystemFont_1rerr"]
 
@@ -89,21 +93,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a20kb")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(576.5, 323.00003)
-scale = Vector2(3.5968747, 3.6)
-texture = ExtResource("2_e4edp")
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(576.5, 323.5)
-scale = Vector2(3.603125, 3.6055553)
-texture = ExtResource("3_g8p52")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(575.5, 323.99997)
-scale = Vector2(3.5968757, 3.6)
-texture = ExtResource("4_v5ntl")
-
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -128,7 +117,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_1rerr")
 theme_override_font_sizes/font_size = 60
-text = "COOKIE SCOUT
+text = "SHOPKEEPER
 "
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -234,6 +223,48 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_rfqti")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_g8i7c")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_23t3j")
 text = "EXIT"
+
+[node name="BackGround007" type="Sprite2D" parent="."]
+z_index = -50
+position = Vector2(576.5, 323.5)
+scale = Vector2(3.2083335, 3.5944443)
+texture = ExtResource("3_41g87")
+
+[node name="BackGround006" type="Sprite2D" parent="."]
+z_index = -45
+position = Vector2(589.99994, 335)
+scale = Vector2(4.5499997, 4.6888885)
+texture = ExtResource("4_1drt4")
+
+[node name="BackGround005" type="Sprite2D" parent="."]
+z_index = -40
+position = Vector2(582, 308)
+scale = Vector2(4.3194447, 5.426389)
+texture = ExtResource("5_6ji8p")
+
+[node name="BackGround004" type="Sprite2D" parent="."]
+z_index = -35
+position = Vector2(574.00006, 311.75)
+scale = Vector2(4.561111, 5.519445)
+texture = ExtResource("6_2knbe")
+
+[node name="BackGround003" type="Sprite2D" parent="."]
+z_index = -30
+position = Vector2(622.5, 302.50003)
+scale = Vector2(4.441667, 5.727778)
+texture = ExtResource("7_8npvd")
+
+[node name="BackGround002" type="Sprite2D" parent="."]
+z_index = -25
+position = Vector2(534.50006, 273)
+scale = Vector2(4.1194444, 4.4666667)
+texture = ExtResource("8_av13w")
+
+[node name="BackGround001" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(576.50006, 326.5)
+scale = Vector2(3.2027776, 3.6277776)
+texture = ExtResource("9_xeird")
 
 [connection signal="pressed" from="BPlay" to="." method="_on_b_play_pressed"]
 [connection signal="pressed" from="BSettings" to="." method="_on_b_settings_pressed"]

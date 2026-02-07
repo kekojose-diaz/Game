@@ -2465,6 +2465,7 @@ position = Vector2(6783, -251)
 [node name="Portal" parent="." instance=ExtResource("16_sgc6j")]
 z_index = 50
 position = Vector2(8745, -228)
+NEXT_LEVEL = "uid://xhibcso7sr6t"
 
 [node name="Portal2" parent="." instance=ExtResource("16_sgc6j")]
 position = Vector2(-63, -132)

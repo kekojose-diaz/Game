@@ -147,6 +147,7 @@ collision_layer = 8
 script = ExtResource("1_px6u8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 4
 sprite_frames = SubResource("SpriteFrames_8b6pa")
 autoplay = "default"
 

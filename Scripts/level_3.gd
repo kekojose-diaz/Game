@@ -1,0 +1,19 @@
+extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	print("Evento ready Level 3")
+	GameManager.respawn_point = Vector2(0,0)
+	add_to_group("level")
+	var musica_nivel3 = preload("res://Assets/Music/Golden Gleam.mp3")
+	AudioManager.play_music(musica_nivel3)	
+	#GameManager.labelScore = label_score
+	#GameManager.reset_points()
+	#var numCookies = get_tree().get_node_count_in_group("Cookie")
+	#GameManager.set_max_points(numCookies)
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
