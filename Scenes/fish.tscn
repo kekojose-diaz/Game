@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dwcly2q6b5wd4"]
 
-[ext_resource type="Script" uid="uid://d2w8q6ab1fhaj" path="res://fish.gd" id="1_4fqy1"]
+[ext_resource type="Script" uid="uid://d2w8q6ab1fhaj" path="res://Scripts/fish.gd" id="1_4fqy1"]
 [ext_resource type="Texture2D" uid="uid://b82l0okrs2ace" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Fish - 7F.png" id="2_4fqy1"]
 [ext_resource type="PackedScene" uid="uid://bf8tva4a0iqa5" path="res://Scenes/killzone.tscn" id="3_jdl8t"]
 

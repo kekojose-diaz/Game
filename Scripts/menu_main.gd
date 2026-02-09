@@ -5,9 +5,14 @@ func _ready() -> void:
 	AudioManager.play_music(musica_menu)	
 	
 func _on_b_play_pressed() -> void:
+	print("Botón Play presionado")
+	print("Ruta de escena: res://Scenes/Level1.tscn")
+	print("¿Escena existe?: ", ResourceLoader.exists("res://Scenes/Level1.tscn"))	
 	TransitionScene.transition(false)
 	await TransitionScene._on_transition_finished
-	get_tree().change_scene_to_file("res://Scenes/level1.tscn")
+	print("Transición completada, cambiando escena...")
+	var error = get_tree().change_scene_to_file("res://Scenes/Level1.tscn")
+	print("Resultado del cambio: ", error)
 
 
 func _on_b_settings_pressed() -> void:

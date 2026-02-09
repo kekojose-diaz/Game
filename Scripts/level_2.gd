@@ -2,8 +2,6 @@ extends Node2D
 
 
 @onready var label_score: Label = %LabelScore
-var audioPlayer : AudioStreamPlayer
-var changedAudio: bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
