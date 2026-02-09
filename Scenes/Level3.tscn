@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://xhibcso7sr6t"]
+[gd_scene load_steps=12 format=4 uid="uid://xhibcso7sr6t"]
 
 [ext_resource type="Texture2D" uid="uid://mkxmj7d1u2sg" path="res://Assets/TileSets/TileSet - Pixel Valley Revamp/Enviroment.png" id="1_0gyft"]
 [ext_resource type="Script" uid="uid://c55m8xxsjl2du" path="res://Scripts/level_3.gd" id="1_y6vx4"]
 [ext_resource type="PackedScene" uid="uid://c8vkxrhkn1x14" path="res://Scenes/player.tscn" id="3_7tk33"]
 [ext_resource type="PackedScene" uid="uid://c1qjcyrtep8w6" path="res://Scenes/cookie.tscn" id="4_7tk33"]
+[ext_resource type="Texture2D" uid="uid://62c2eqfup607" path="res://Assets/Cookie/Cookie_rotating.png" id="5_44apn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2sg52"]
 texture = ExtResource("1_0gyft")
@@ -5357,3 +5358,32 @@ position = Vector2(545, 535)
 
 [node name="Cookie18" parent="Cookies2" instance=ExtResource("4_7tk33")]
 position = Vector2(593, 516)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 2
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 72.0
+offset_bottom = 43.0
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(6, 11)
+texture = ExtResource("5_44apn")
+centered = false
+hframes = 4
+
+[node name="LabelScore" type="Label" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.5830002
+anchor_top = -2.628
+anchor_right = 2.5830002
+anchor_bottom = -2.628
+offset_left = -161.97601
+offset_top = 118.004
+offset_right = -119.97601
+offset_bottom = 141.004
+text = "0 / 20"

@@ -7,10 +7,12 @@ signal _on_transition_finished
 
 
 func _ready():
+	print("Transición ready")
 	color_rect.visible = false
 	animation_player.animation_finished.connect(_on_animation_finished)
 	
 func _on_animation_finished(anim_name):
+	print("Transicion finished")
 	if ((anim_name == "fade_to_black") or (anim_name == "fade_to_black_sound")):
 		_on_transition_finished.emit()
 		animation_player.play("fade_to_normal")
@@ -18,6 +20,7 @@ func _on_animation_finished(anim_name):
 		color_rect.visible = false
 	
 func transition(with_sound:bool):
+	print("transition starts")
 	color_rect.visible = true
 	if(with_sound):
 		animation_player.play("fade_to_black_sound")
