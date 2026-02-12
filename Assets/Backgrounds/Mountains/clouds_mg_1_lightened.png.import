@@ -3,19 +3,21 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4a0uyxut6wbs"
-path="res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.ctex"
+path.s3tc="res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.s3tc.ctex"
+path.etc2="res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Assets/Backgrounds/Mountains/clouds_mg_1_lightened.png"
-dest_files=["res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.ctex"]
+dest_files=["res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.s3tc.ctex", "res://.godot/imported/clouds_mg_1_lightened.png-b4e0398a9417a4c9c34e2b9d9b788ad6.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
