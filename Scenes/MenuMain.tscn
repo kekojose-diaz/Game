@@ -117,7 +117,7 @@ layout_mode = 2
 theme_override_constants/outline_size = 24
 theme_override_fonts/font = SubResource("SystemFont_1rerr")
 theme_override_font_sizes/font_size = 60
-text = "SHOPKEEPER
+text = "THE SHOPKEEPER
 "
 horizontal_alignment = 1
 vertical_alignment = 1
